@@ -1,0 +1,23 @@
+<ul class="chart-header">
+  <li *ngFor="let item of getNumberOfDays(); let day = index">
+    <button class="day" [ngClass]="isTheActiveDay(day) ? 'active' : ''" (click)="onDayClick(day)">
+      <div class="day-name">{{ DAYS_OF_THE_WEEK[getDayName(day)] }}</div>
+      <div class="day-number">{{ getDayNumber(day) }}</div>
+    </button>
+  </li>
+</ul>
+
+<div class="chart-body">
+  <div class="chart-layout">
+    <div *ngFor="let item of getNumberOfCols(); let col = index;" class="layout-col">
+      <div *ngIf="isAnHourCol(col)" class="layout-col-label">{{ getColLabel(col) }}</div>
+      <div class="layout-col-line"></div>
+    </div>
+  </div>
+
+  <div class="chart-data">
+    <div *ngFor="let instructor of getInstructorsWithLessons()" class="chart-row">
+      <app-grantt-chart-item *ngFor="let lesson of getInstructorSchedule(instructor.id)" [lesson]="lesson" [ngStyle]="{ 'grid-column': getGridColumnStyle(lesson.beginning, lesson.finish) }"></app-grantt-chart-item>
+    </div>
+  </div>
+</div>

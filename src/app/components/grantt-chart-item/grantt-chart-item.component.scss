@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-radius: 25px;
+  padding-right: 5px;
+  overflow: hidden;
+  color: #FFF;
+}
+
+img {
+  margin-right: 5px;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border: 5px solid;
+  flex-shrink: 0;
+}
+
+p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

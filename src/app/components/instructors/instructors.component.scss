@@ -1,0 +1,15 @@
+.instructor-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  gap: 1rem;
+  overflow: auto;
+  
+  &.grid-view {
+    grid-auto-flow: row;
+  }
+}
+
+.view-icon {
+  transform: rotate(90deg);
+}

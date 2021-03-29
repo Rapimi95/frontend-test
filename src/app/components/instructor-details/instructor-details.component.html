@@ -1,0 +1,61 @@
+<div class="page-container">
+  <header class="page-header">
+    <div class="header-left">
+      <a routerLink="/instructors">
+        <span class="material-icons">keyboard_backspace</span>
+      </a>
+    </div>
+    
+    <div class="header-center">
+      <h1>Mariam Schumm</h1>
+    </div>
+  </header>
+
+  <main class="page-content">
+      <app-instructor-card [instructor]="instructor"></app-instructor-card>
+      
+      <div class="subject-info">
+        <div class="subject-description">
+          <h3 class="description-header">Description of the instructor and their background.</h3>
+          <p class="description-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, 
+            laboriosam enim! Suscipit, molestias eligendi laborum maxime repellendus, 
+            accusamus numquam ad optio reprehenderit tempora est assumenda doloremque 
+            sunt pariatur, unde sit?
+          </p>
+          <div class="description-footer">
+            <strong>LOREM IPSUM DOLOR, SIT AMET CONSECTETUR</strong>
+
+            <a routerLink="/" class="btn-with-icon">
+              <span class="material-icons">public</span>
+              <strong>webpage</strong>
+            </a>
+          </div>
+        </div>
+
+        <div class="subject-img whiten-bg" [ngStyle]="{'background-color': instructor.color}">
+          <span class="material-icons icon">insert_photo</span>
+        </div>
+        
+        <div class="subject-img whiten-bg" [ngStyle]="{'background-color': instructor.color}">
+          <span class="material-icons icon">insert_photo</span>
+        </div>
+
+        <div class="review" [ngStyle]="{'background-color': instructor.color}">
+          <img src="../../assets/images/profile_picture.jpeg" alt="Profile picture">
+
+          <div class="text">
+            <h6>Name Surname</h6>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestiae numquam 
+              et praesentium dolore ut ratione magni inventore earum labore, distinctio.
+            </p>
+          </div>
+
+          <a routerLink="/">
+            <span class="material-icons">more_vert</span>
+          </a>
+        </div>
+      </div>
+  </main>
+</div>

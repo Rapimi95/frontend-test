@@ -1,0 +1,91 @@
+<div class="page-container">
+  <header class="page-header">
+    <div class="header-left">
+      <button class="btn-with-icon add-event-btn" (click)="onNewEventClick()">
+        <span class="material-icons">add</span>
+        <span>New Event</span>
+      </button>
+      
+      <button class="btn-with-icon">
+        <span class="material-icons">radio_button_unchecked</span>
+        <span>Select</span>
+      </button>
+    </div>
+    
+    <div class="header-center">
+      <h1>Calendar</h1>
+    </div>
+
+    <div class="header-right">
+      <button class="btn-with-icon active">
+        <span class="material-icons">event</span>
+        <span>Today</span>
+      </button>
+      <button class="btn-with-icon">
+        <span class="material-icons">date_range</span>
+        <span>Week</span>
+      </button>
+      <button class="btn-with-icon">
+        <span class="material-icons">event_note</span>
+        <span>Month</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <aside class="page-sidebar">
+      <app-search-input placeholder="Event search"></app-search-input>
+      <app-checkbox-list *ngFor="let filter of filters" [title]="filter.title" [options]="filter.options"></app-checkbox-list>
+    </aside>
+
+    <main class="page-main">
+      <app-gantt-chart></app-gantt-chart>
+    </main>
+  </div>
+
+  <div *ngIf="isCreatingEvent" class="modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <button><span class="material-icons">fullscreen</span></button>
+        <button (click)="onNewEventClick()"><span class="material-icons">close</span></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <fa-icon [icon]="faUser"></fa-icon>
+          <select [(ngModel)]="instructorField" (change)="onInstructorChange()" class="material-input">
+            <option [ngValue]="0">Instructor Name</option>
+            <option *ngFor="let instructor of instructors" [ngValue]="instructor.id">{{ instructor.name }}</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <fa-icon [icon]="faBook"></fa-icon>
+          <select [(ngModel)]="subjectField" class="material-input">
+            <option [ngValue]="0">Subject Name</option>
+            <option *ngFor="let subject of subjects" [ngValue]="subject.id">{{ subject.name }}</option>
+          </select>
+        </div>
+        
+        <div class="row">
+          <fa-icon [icon]="faClock"></fa-icon>
+          <select [(ngModel)]="beginningField" class="material-input">
+            <option *ngFor="let time of getValidTimes()" [ngValue]="time.value">{{ time.label }}</option>
+          </select>
+          <select [(ngModel)]="finishField" class="material-input">
+            <option *ngFor="let time of getValidTimes()" [ngValue]="time.value">{{ time.label }}</option>
+          </select>
+        </div>
+        <div class="row">
+          <fa-icon [icon]="faMapMarkerAlt"></fa-icon>
+          <input type="text" class="material-input">  
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button>More Details</button>
+        <button class="save-btn" (click)="onSaveClick()">SAVE</button>
+      </div>
+    </div>
+  </div>
+</div>

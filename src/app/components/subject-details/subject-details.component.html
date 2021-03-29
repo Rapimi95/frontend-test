@@ -1,0 +1,81 @@
+<div class="page-container">
+
+  <header class="page-header">
+    <div class="header-left">
+      <a routerLink="/subjects">
+        <span class="material-icons">keyboard_backspace</span>
+      </a>
+    </div>
+    
+    <div class="header-center">
+      <h1>Mathematics</h1>
+    </div>
+  </header>
+  
+  <div class="page-content">
+    <app-instructor-card [instructor]="instructor"></app-instructor-card>
+    
+    <div class="subject-info">
+      <div class="subject-description">
+        <h3 class="description-header">Sypnosis of the subject's objectives and background.</h3>
+        <p class="description-text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, 
+          laboriosam enim! Suscipit, molestias eligendi laborum maxime repellendus, 
+          accusamus numquam ad optio reprehenderit tempora est assumenda doloremque 
+          sunt pariatur, unde sit?
+        </p>
+        <div class="description-footer">
+          <strong>LOREM IPSUM DOLOR, SIT AMET CONSECTETUR</strong>
+
+          <a routerLink="/" class="btn-with-icon">
+            <span class="material-icons">public</span>
+            <strong>webpage</strong>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="courseware whiten-bg" [ngStyle]="{'background-color': instructor.color}">
+        <h3>Courseware</h3>
+        <ul>
+          <li>- class 1 (description of the class and homework)</li>
+          <li>- class 2 (description of the class and homework)</li>
+          <li>- class 3 (description of the class and homework)</li>
+          <li>- class 4 (description of the class and homework)</li>
+          <li>- class 5 (description of the class and homework)</li>
+          <li>- class 6 (description of the class and homework)</li>
+          <li>- etc</li>
+        </ul>
+        <div class="footer">
+          <a routerLink="/">
+            <strong>Full courseware</strong>
+          </a>
+          <button class="pdf-link btn-with-icon" [ngStyle]="{'color': instructor.color}">
+            <fa-icon [icon]="faFilePdf"></fa-icon>
+            <span>PDF File</span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="default-img whiten-bg" [ngStyle]="{'background-color': instructor.color}">
+        <span class="material-icons icon">insert_photo</span>
+      </div>
+
+      <div class="review" [ngStyle]="{'background-color': instructor.color}">
+        <img src="../../assets/images/profile_picture.jpeg" alt="Profile picture">
+
+        <div class="text">
+          <h6>Name Surname</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi molestiae numquam 
+            et praesentium dolore ut ratione magni inventore earum labore, distinctio.
+          </p>
+        </div>
+
+        <a routerLink="/">
+          <span class="material-icons">more_vert</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+app-instructor-card {
+  margin-right: 2rem;
+}
+
+.subject-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.subject-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .description-header {
+    font-weight: 400;
+  }
+  
+  .description-body {
+    text-align: justify;
+  }
+  
+  .description-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.subject-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #d4dbec;
+  color: #FFF;
+  border-radius: 1.5rem;
+  
+  .icon {
+    font-size: 3rem;
+  }
+}
+
+.review {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 2rem;
+  padding: 2rem;
+  background-color: #556fb5;
+  border-radius: 1.5rem;
+  color: #FFF;
+
+  img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  h6 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .text {
+    align-self: center;
+  }
+}

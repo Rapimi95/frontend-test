@@ -1,0 +1,8 @@
+<strong>{{ title }}</strong>
+
+<div class="group" *ngFor="let option of getOptions(); let i = index">
+  <input type="checkbox" [id]="'filter-' + title + '-' + i">
+  <label [for]="'filter-' + title + '-' + i">{{ option }}</label>
+</div>
+
+<button (click)="onExpand()">See more</button>

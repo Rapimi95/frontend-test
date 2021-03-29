@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid var(--primary-color-dark);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.icon {
+  color: var(--light-color);
+  padding: 2px;
+}
+
+input {
+  padding: 2px;
+  border: none;
+  width: 100%;
+}

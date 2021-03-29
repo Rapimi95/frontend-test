@@ -1,0 +1,102 @@
+.container {
+  display: block;
+  text-align: center;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.teacher-img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 6rem;
+  width: 6rem;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  column-gap: .25rem;
+  margin-top: 2rem;
+}
+
+.skills-item {
+  padding: .4rem .2rem;
+  font-size: .6rem;
+  background-color: #FFF;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.top {
+  padding: 3rem 2rem;
+}
+
+.students {
+  margin-bottom: 1.5rem;
+
+  ul {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1.5rem);
+    justify-content: center;
+  }
+  
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 2rem;
+    width: 2rem;
+    border: 2px solid;
+  }
+}
+
+.projects {
+  ul {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 3rem);
+    justify-content: center;
+  }
+  
+  img {
+    border-radius: 8px;
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid;
+  }
+}
+
+.bottom {
+  padding: 3rem 2rem;
+  color: #FFF;
+  height: 100%;
+}
+
+.more-students {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #FFF;
+  font-weight: bold;
+  font-size: .6rem;
+  color: #000;
+  border: 2px solid #FFF;
+}
+
+.more-projects {
+  border-radius: 8px;
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid #FFF;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: .6rem;
+  font-weight: bold;
+}

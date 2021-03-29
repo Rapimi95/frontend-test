@@ -1,0 +1,57 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0 1rem;
+  background-color: var(--primary-color);
+  color: #FFF;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.left {
+  justify-self: start;
+}
+
+.center {
+  justify-self: center;
+  color: rgba($color: #FFF, $alpha: .7);
+  .active {
+    color: #FFF;
+  }
+}
+
+.right {
+  justify-self: end;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list-item {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  font-weight: 400;
+
+  & .active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+.brand, .right .nav-list-item {
+    padding: 0 .8rem;
+}

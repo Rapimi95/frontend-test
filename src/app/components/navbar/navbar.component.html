@@ -1,0 +1,35 @@
+<nav class="navbar">
+  <div class="left">
+    <a href="/">
+      <h4 class="brand">MINTY MINT</h4>
+    </a>
+  </div>
+
+  <div class="center">
+    <ul class="nav-list">
+      <li class="nav-list-item" *ngFor="let route of routes">
+        <a [routerLink]="route.path" routerLinkActive="active">{{ route.label }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="right">
+    <ul class="nav-list">
+      <li class="nav-list-item">
+        <button>    
+          <span class="material-icons">search</span>
+        </button>
+      </li>
+      <li class="nav-list-item">
+        <button>    
+          <span class="material-icons">notifications</span>
+        </button>
+      </li>
+      <li class="nav-list-item">
+        <button>    
+          <span class="material-icons">person</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,36 @@
+<a [routerLink]="'/instructors/' + instructor.slug" class="container" [ngStyle]="{'background-color': instructor.color}">
+  <div class="top whiten-bg">
+    <img class="teacher-img" [src]="instructor.image" alt="Profile picture">
+    <h6>{{ instructor.name }}</h6>
+    <small>{{ printSubjects() }}</small>
+    <ul class="skills">
+      <li class="skills-item" [ngStyle]="{'border-color': instructor.color}" *ngFor="let skill of instructor.skills">{{ skill }}</li>
+    </ul>
+  </div>
+
+  <div class="bottom" *ngIf="showDetails">
+    <div class="students">
+      <small>STUDENTS</small>
+      <ul>
+        <li class="students-item" *ngFor="let student of students.slice(0, 5)">
+          <img [src]="student.image" [ngStyle]="{'border-color': instructor.color}" alt="Profile picture">
+        </li>
+        <li class="students-item" *ngIf="students.length > 5">
+          <div class="more-students" [ngStyle]="{'border-color': instructor.color}">+{{ students.length - 5 }}</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="projects">
+      <small>RECENT PROJECTS</small> 
+      <ul>
+        <li class="project-item" *ngFor="let project of projects.slice(0, 3)">
+          <img [src]="project.image" [ngStyle]="{'border-color': instructor.color}" alt="Project picture">
+        </li>
+        <li class="project-item" *ngIf="projects.length > 5">
+          <div class="more-projects" [ngStyle]="{'border-color': instructor.color}">+{{ projects.length - 5 }}</div>
+        </li>
+      </ul>
+    </div> 
+  </div>
+</a>

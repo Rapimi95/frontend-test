@@ -1,0 +1,36 @@
+<div class="page-container">
+  <header class="page-header">
+    <div class="header-left">
+      <button class="btn-with-icon">
+        <span class="material-icons">add</span>
+        <span>New Instructor</span>
+      </button>
+    </div>
+    
+    <div class="header-center">
+      <h1>Instructors</h1>
+    </div>
+
+    <div class="header-right">
+      <button class="btn-with-icon" (click)="onChangeView()">
+        <span>View</span>
+        <span class="view-icon material-icons">{{ viewIcon }}</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <aside class="page-sidebar">
+      <app-search-input placeholder="Instructor search"></app-search-input>
+      <app-checkbox-list *ngFor="let filter of filters" [title]="filter.title" [options]="filter.options"></app-checkbox-list>
+    </aside>
+    
+    <main class="page-main">
+      <ul class="instructor-list" [ngClass]="gridView ? 'grid-view' : ''">
+        <li *ngFor="let instructor of instructors">
+          <app-instructor-card [instructor]="instructor" [showDetails]="!gridView"></app-instructor-card>
+        </li>
+      </ul>
+    </main>
+  </div>
+</div>

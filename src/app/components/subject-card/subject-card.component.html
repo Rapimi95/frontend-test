@@ -1,0 +1,37 @@
+<a [routerLink]="'/subjects/' + subject.slug" class="container">
+  <div class="img-default" [ngStyle]="{'background-color': instructor.color}">
+    <span class="material-icons">insert_photo</span>
+  </div>
+
+  <div class="content whiten-bg" [ngStyle]="{'background-color': instructor.color}">
+    <div class="header">
+      <div>
+        <h6>{{ subject.name }}</h6>
+        <p>{{ instructor.name }}</p>
+      </div>
+      
+      <ul class="skills">
+        <li class="skills-item" [ngStyle]="{'border-color': instructor.color}" *ngFor="let skill of instructor.skills">{{ skill }}</li>
+      </ul>
+    </div>
+
+    <div class="body">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio soluta 
+        aliquid delectus facilis reprehenderit, exercitationem molestiae debitis 
+        eaque suscipit veritatis similique.
+      </p>
+    </div>
+
+    <div class="footer">
+      <div class="social-icons">
+        <a routerLink="/"><fa-icon [icon]="faInstagram"></fa-icon></a>
+        <a routerLink="/"><fa-icon [icon]="faTwitter"></fa-icon></a>
+        <a routerLink="/"><fa-icon [icon]="faFacebookF"></fa-icon></a>
+        <a routerLink="/"><fa-icon [icon]="faGlobeAmericas"></fa-icon></a>
+      </div>
+
+      <button class="btn">CONTACT</button>
+    </div>
+  </div>
+</a>

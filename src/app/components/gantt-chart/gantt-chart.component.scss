@@ -1,0 +1,91 @@
+.chart-header {
+  display: flex;
+  background-color: var(--primary-color-light);
+  color: var(--primary-color);
+  overflow-x: auto;
+  margin-bottom: 1rem;
+
+  &>* {
+    flex-shrink: 0;
+  }
+  
+  .day {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    
+    &.active {
+      background-color: var(--primary-color);
+      color: #FFF;
+    }
+
+    .day-number {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.chart-body {
+  margin-top: 1rem;
+  position: relative;
+
+  &>* {
+    padding: 0 1rem;
+  }
+}
+
+.chart-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(36, 1fr);
+  height: 100%;
+
+  .layout-col {
+    position: relative;
+
+    &:nth-child(4n + 1) .layout-col-line {
+      border-left: 2px solid var(--primary-color-dark);
+    }
+  }
+
+  .layout-col-label {
+    font-size: .8rem;
+    color: var(--primary-color-dark);
+    position: absolute;
+    left: -14.5px;
+  }
+
+  .layout-col-line {
+    border-left: 1px dashed #000;
+    margin-top: 30px;
+    height: 100%;  
+  }
+
+}
+
+.chart-data {
+  padding-top: 30px !important;
+}
+
+.chart-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(36, 1fr);
+  margin: 30px 0;
+  align-content: center;
+  width: 100%;
+}
+
+app-grantt-chart-item {
+  height: 50px;
+  z-index: 10;
+}

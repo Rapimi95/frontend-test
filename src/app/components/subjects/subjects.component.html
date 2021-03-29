@@ -1,0 +1,29 @@
+<div class="page-container">
+  <header class="page-header">
+    <div class="header-left">
+      <button class="btn-with-icon">
+        <span class="material-icons">add</span>
+        <span>New Subject</span>
+      </button>
+    </div>
+    
+    <div class="header-center">
+      <h1>Subjects</h1>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <aside class="page-sidebar">
+      <app-search-input placeholder="Subject search"></app-search-input>
+      <app-checkbox-list *ngFor="let filter of filters" [title]="filter.title" [options]="filter.options"></app-checkbox-list>
+    </aside>
+    
+    <main class="page-main">
+      <ul class="subject-list">
+        <li *ngFor="let subject of subjects">
+          <app-subject-card [subject]="subject"></app-subject-card>
+        </li>
+      </ul>
+    </main>
+  </div>
+</div>

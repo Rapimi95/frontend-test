@@ -1,0 +1,41 @@
+.add-event-btn {
+  width: 170px;
+}
+
+.header-right {
+  &>button:not(.active) {
+    opacity: .5;
+  }
+}
+
+.save-btn {
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.material-input {
+  border: none;
+  border-bottom: 1px solid var(--light-color);
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+
+  &>fa-icon {
+    width: 20px;
+  }
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+
+fa-icon {
+  color: var(--light-color);
+  font-size: 1.2rem;
+}

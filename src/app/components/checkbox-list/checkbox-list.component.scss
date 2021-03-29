@@ -1,0 +1,19 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: .25rem;
+}
+
+input {
+  margin-right: .5rem;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  color: var(--primary-color-dark);
+  font-size: .8rem;
+}
